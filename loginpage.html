@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile & Sunshine Toy Co. - Login</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #000000;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .loginui {
+            background-color: rgb(31, 30, 30);
+            padding: 40px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .companylogo {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .companylogo span {
+            color: #ffffff;
+        }
+
+        .loginform input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+
+        .loginform button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff5100;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .loginform button:hover {
+            background-color: #ff8000;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            margin:20px 0;
+            font-size: 14px;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #999999;
+        }
+
+        .registerlink {
+            text-align: center;
+            margin-top: 20px;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .register-modal {
+            background: rgb(168, 168, 168);
+            padding: 2rem;
+            border-radius: 8px;
+            width: 400px;
+            position: relative;
+            animation: modalSlide 0.2s ease-out;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #666;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+            gap: 0.1px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 1rem;
+            background: #ff6803;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            
+        }
+
+        button:hover {
+            background-color: #ff8000;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .signup-link a {
+            color: #ff9d2d;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .left-align {
+            text-align: left;
+        }
+        
+        .h10{
+            size: 1px;
+        }
+        
+
+        
+        @keyframes modalSlide {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="companylogo">
+        <h1><span>😊Smile & Sunshine</span></h1><br><br>
+
+        <div class="loginui">
+
+            <form class="loginform">
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                
+                <div class="options">
+                    <a href="forgotpasswd.html">Forgot Password?
+                </div>
+
+                <button type="submit">Log In</button>
+            </form>
+
+            <div class="registerlink">
+                <a id="openRegister"><p>Don't have an account? Register here</p></a>
+            </div>
+        </div>
+
+
+        <div class="modal-backdrop" id="registerModal">
+            <div class="register-modal">
+                <span class="close-btn" onclick="closeModal()">×</span>
+                <h1>Join us now</h1>
+                <form id="registerForm">
+                
+                    <div class="form-group">
+                        <div class="left-align">
+                            <label for="email"><strong>Email</strong></label>
+                            
+                            
+                            <input type="email" placeholder="will be used for account verification and password retrieval" required><br><br><br>
+
+                            <label for="text"><strong>Username</strong></label>
+                        
+                         <input type="text" placeholder="enter your Username" required><br><br><br>
+                    
+                    
+                        
+                         <label for="password"><strong>Password</strong></label>
+                        </div>
+                        <input type="password" placeholder="password" required><br><br><br>
+                    </div>
+                    <button type="submit">Sign up</button>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById('openRegister').addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById('registerModal').style.display = 'flex';
+            });
+    
+       
+            function closeModal() {
+                document.getElementById('registerModal').style.display = 'none';
+            }
+    
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeModal();
+                }
+            });
+        </script>
+    </body>
+    </html>
