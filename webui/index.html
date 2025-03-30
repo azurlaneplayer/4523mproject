@@ -60,17 +60,17 @@
         <section id="section1">
             <h2>Section 1</h2>
             
-<div class="product">
-    <img src="webui\img\product\1.jpg" alt="1.jpg"> <div>
+    <div class="product">
+        <img src="webui\img\product\1.jpg" alt="1.jpg"> <div>
         
-    <h3>Product 1</h3>
-    <p>$10.00</p>
-    <input type="number" min="0" placeholder="Qty" id="product1Qty"> </div>
+        <h3>Product 1</h3>
+        <p>$10.00</p>
+        <input type="number" min="0" placeholder="Qty" id="product1Qty"> </div>
     </div>
     <div class="product">
-    <img src="https://via.placeholder.com/100" alt="Product 2">
+        <img src="https://via.placeholder.com/100" alt="Product 2">
     <div>
-    <h3>Product 2</h3>
+        <h3>Product 2</h3>
     <p>$15.00</p>
     <input type="number" min="0" placeholder="Qty" id="product2Qty"> </div>
     </div>
@@ -90,6 +90,7 @@
     </div>
     <div class="product">
     <img src="https://via.placeholder.com/100" alt="Product 5">
+
     <div>
     <h3>Product 5</h3>
     <p>$30.00</p>
@@ -97,8 +98,37 @@
         </section>
         
     </div>
+
+
+
+
     <footer>
         <p>&copy; 2025 Smile & Sunshine Toy Co, Ltd. </p>
     </footer>
+
+
+
+
+
+
+    <script>
+        function finishSelection() {
+        const products = [
+        { name: "Product 1", qty: document.getElementById("product1Qty").value },
+        { name: "Product 2", qty: document.getElementById("product2Qty").value },
+        { name: "Product 3", qty: document.getElementById("product3Qty").value },
+        { name: "Product 4", qty: document.getElementById("product4Qty").value },
+        { name: "Product 5", qty: document.getElementById("product5Qty").value },
+        ];
+        
+        const selectedProducts = products.filter(product => product.qty > 0);
+        
+        if (selectedProducts.length > 0) {
+        alert("You selected:\n" + selectedProducts.map(p => `${p.name}: ${p.qty}`).join("\n"));
+        } else {
+        alert("No products selected.");
+        }
+        }
+    </script>
 </body>
 </html>
