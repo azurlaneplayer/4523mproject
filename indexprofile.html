@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .profile-container {
+            max-width: 600px;
+            margin: auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #35424a;
+        }
+        .profile-picture {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-picture img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .profile-info {
+            margin-bottom: 20px;
+        }
+        .profile-info label {
+            font-weight: bold;
+        }
+        .profile-info p {
+            margin: 5px 0;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #35424a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e8491d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="profile-container">
+    <h1>User Profile</h1>
+    
+    <div class="profile-picture">
+        <img src="https://via.placeholder.com/150" alt="Profile Picture">
+    </div>
+
+    <div class="profile-info">
+        <label for="name">Name:</label>
+        <p id="name">John Doe</p>
+
+        <label for="email">Email:</label>
+        <p id="email">johndoe@example.com</p>
+
+        <label for="bio">Bio:</label>
+        <p id="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu.</p>
+    </div>
+
+    <button onclick="editProfile()">Edit Profile</button>
+</div>
+
+<script>
+    function editProfile() {
+        alert("Edit profile functionality goes here.");
+        // You can add functionality to open an edit form or redirect to an edit page.
+    }
+</script>
+
+</body>
+</html>
