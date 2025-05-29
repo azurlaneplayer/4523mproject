@@ -9,11 +9,15 @@
     if($conn ->connect_error ){
         die("Connection failed: " . $conn->connect_error);
     }
+<<<<<<< Updated upstream
     else{
         echo("successful\n<br><br><br>");
         
 
     }
+=======
+   
+>>>>>>> Stashed changes
 
 
    
