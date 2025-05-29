@@ -10,11 +10,13 @@
         die("Connection failed: " . $conn->connect_error);
     }
     else{
-        echo("successful");
+        echo("successful\n<br><br><br>");
+        
+
     }
 
 
-
+   
 
 
 
